@@ -3,13 +3,13 @@ import React, { useState } from 'react'
 export default function Tooltip({text,children}) {
   const [showTooltip,setShowTooltip]=useState(false);
   return (
-    <div className="tooltip"
+    <div 
       onMouseEnter={()=>(setShowTooltip(true))}
       onMouseLeave={()=>(setShowTooltip(false))}
     >
       
         {children}
-        {showTooltip && <span className='tooltiptext'>{text}</span>}
+        {showTooltip && <div className='tooltiptext'>{text}</div>}
     </div>
   )
 }
